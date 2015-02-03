@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <section class="intro"><h1>Inspirational Quotes</h1></section>
+    <section class="quoteForm">
+      <h3>Insert a new quote:</h3>
+      <div class="quoteFields">
+        <label>Quote:</label><input id="quoteForm"><br>
+        <label>Author:</label><input id="authorForm"><br>
+        <label>Rating:</label><input id="ratingForm"> (1-5)<br>
+        <button class="quoteSubmit">Submit This Quote!</button><br>
+        <a href="#" id="formHide">(Click here to hide this form)</a>
+      </div>
+    </section>
+    <section class="allQuotes">
+      <h2>List of Quotes:</h2>
+      <div class="quotesList">
+        <table>
+          <tr class="quotesListHeader">
+            <th>Quote</th>
+            <th>Author</th>
+            <th>Rating</th>
+            <th>Delete</th>
+          </tr>
+        </table>
+      </div>
+    </section>
+    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.js"></script>
+    <script src="main.js"></script>
+
+  </body>
+</html>

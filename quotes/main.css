@@ -1,0 +1,56 @@
+body {
+	width: 90%;
+	margin: auto;
+	text-align: center;
+}
+
+table, tr {
+	width: 100%;
+}
+
+td, th {
+	text-align: justify;
+	padding: 10px;
+	overflow: hidden;
+}
+
+.intro {
+	text-align: center;
+	margin: 50px 10px 50px 10px;
+
+}
+
+.quoteForm {
+	text-align: left;
+}
+
+.quoteFields {
+	display: inline-block;
+	width: 100%;
+}
+
+.quoteFields label {
+	padding: 5px;
+	width: 60px;
+}
+
+.quoteFields #quoteForm {
+	width: 50%;
+}
+
+#ratingForm {
+	width: 5%;
+}
+
+#formHide {
+	font-size: 0.8em;
+}
+
+.quotesList {
+	text-align: justify;
+	display: block;
+}
+
+#quoteItem, .quotesListHeader {
+	display: table-row;
+}
