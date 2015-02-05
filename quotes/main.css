@@ -2,6 +2,10 @@ body {
 	width: 90%;
 	margin: auto;
 	text-align: center;
+	background: #a5ffff;
+}
+
+body * {
 }
 
 table, tr {
@@ -42,7 +46,7 @@ td, th {
 	width: 5%;
 }
 
-#formHide {
+#formHide, #formShow{
 	font-size: 0.8em;
 }
 
