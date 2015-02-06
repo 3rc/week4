@@ -29,7 +29,6 @@ $(document).on('ready', function() {
 			$("input").val("");
 
 			allQuotes.push(new Quote(quoteInput, authorInput, ratingInput));
-
 			$(".quoteItems").remove();
 
 			var sortedQuotes = _.sortBy(allQuotes, function(allQuotes) {return (allQuotes.rating)}).reverse();
@@ -43,15 +42,34 @@ $(document).on('ready', function() {
 					filteredSortedQuotes[i].author + 
 					"</td><td id='quoteItemRating'>" + 
 					filteredSortedQuotes[i].rating + 
-					"★</td><td id='" + sortedQuotes[i].idUnique + "'>" + 
-					deleteQuote + "</td></tr>" )
+					"★</td><td id='" + filteredSortedQuotes[i].idUnique +
+					 "'>" + deleteQuote + "</td></tr>" )
 			}
 		}
 		$(".deleteQuote").click(function() {
-			$(this).parent().parent().remove();
-			allQuotes[$(this).parent().attr("id") - 1].quoteText = null;
-			allQuotes[$(this).parent().attr("id") - 1].author = null;
-			allQuotes[$(this).parent().attr("id") - 1].rating = null;
+			var deletedQuote = $(this).parent().parent();
+			deletedQuote.hide();
+			var undoDelete = "<button class='undoDelete'>Undo Last Delete</button>";
+			var deletedQuoteId = $(this).parent();
+			$("body").append(undoDelete);
+			// $(this).parent().parent().remove();
+			// allQuotes[$(this).parent().attr("id") - 1].quoteText = null;
+			// allQuotes[$(this).parent().attr("id") - 1].author = null;
+			// allQuotes[$(this).parent().attr("id") - 1].rating = null;
+			// $("#undoDelete").click(function() {
+			// 	deletedQuote.show();
+			// 	$(this).remove();
+			// });
+
+			$(document).on("click", function() {
+				if($(event.target).hasClass("undoDelete")) {
+					deletedQuote.show();
+					$(".undoDelete").remove();
+				}
+				else {
+					console.log(deletedQuote)
+				}
+			});
 
 		});
 	});

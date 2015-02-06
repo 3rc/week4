@@ -17,6 +17,11 @@ td, th {
 	padding: 10px;
 	overflow: hidden;
 }
+#undoDelete {
+	float: right;
+	background: pink;
+	margin-top: 20px;
+}
 
 .intro {
 	text-align: center;
