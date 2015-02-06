@@ -11,13 +11,23 @@
     <section class="quoteForm">
       <h3>Insert a new quote:</h3>
       <div class="quoteFields">
-        <label>Quote:</label><input id="quoteForm" value='"Dude, sucking at something is the first step to being sorta good at something."'><br>
+        <label>Quote:</label><input id="quoteForm" value='Dude, sucking at something is the first step to being sorta good at something.'><br>
         <label>Author:</label><input id="authorForm" value="Jake the Dog"><br>
         <label>Rating:</label><input id="ratingForm" value="5" maxlength="1"> (1-5)<br>
         <button class="quoteSubmit">Submit This Quote!</button><br>
         <a href="#" id="formHide">(Click here to hide this form)</a>
       </div>
     </section>
+
+    <section class="random-quote">
+      <div class="quote-generator">
+        <p>After adding some quotes, click for a random one:</p>
+        <button class="random-quote-button">QUOTE</button>
+        <div class="random-quote-text"></div>
+        <a href="#" id="buttonHide">(Click to hide)</a>
+      </div>
+    </section>
+
     <section class="allQuotes">
       <h2>List of Quotes:</h2>
       <div class="quotesList">
@@ -34,7 +44,7 @@
     
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/json2/20140204/json2.min.js"></script>
     <script src="main.js"></script>
 
   </body>

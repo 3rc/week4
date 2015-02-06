@@ -2,11 +2,10 @@ body {
 	width: 90%;
 	margin: auto;
 	text-align: center;
-	background: #a5ffff;
+	background-image: url(http://the3rc.com/3rc/quotebg.png);
+	background-repeat: repeat;
 }
 
-body * {
-}
 
 table, tr {
 	width: 100%;
@@ -17,12 +16,6 @@ td, th {
 	padding: 10px;
 	overflow: hidden;
 }
-#undoDelete {
-	float: right;
-	background: pink;
-	margin-top: 20px;
-}
-
 .intro {
 	text-align: center;
 	margin: 50px 10px 50px 10px;
@@ -47,14 +40,33 @@ td, th {
 	width: 50%;
 }
 
+.allQuotes {
+	margin-top: 50px;
+}
+
+.quoteItems {
+	background: rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+}
+
 #ratingForm {
 	width: 5%;
 }
 
-#formHide, #formShow{
-	font-size: 0.8em;
+#formHide, #buttonHide{
+	font-size: 1rem;
 }
 
+#formShow, #buttonShow {
+	font-size: 1.5rem;
+}
+
+#buttonHide {
+	text-decoration: none;
+	color: white;
+	float: right;
+	padding: 4px;
+}
 .quotesList {
 	text-align: justify;
 	display: block;
@@ -62,4 +74,60 @@ td, th {
 
 #quoteItem, .quotesListHeader {
 	display: table-row;
+}
+
+
+.undoDelete {
+	float: right;
+	background: pink;
+	margin-top: 20px;
+}
+
+.quote-generator {
+	background: #3498db;
+	width: 40%;
+	margin: auto;
+	border-radius: 10px;
+	padding: 30px;
+	font-size: 2rem;
+}
+
+.random-quote-button {
+	color: #2980b9;
+	font-weight: bold;
+	border-radius: 5px;
+	font-size: 3rem;
+}
+
+.random-quote-text {
+	padding-top: 20px;
+	font-size: 1.5rem;
+}
+
+.editRating {
+	width: 100px;
+}
+
+#rating5:after {
+	content: "★★★★★";
+}
+
+#rating4:after {
+	content: "★★★★☆";
+}
+
+#rating3:after {
+	content: "★★★☆☆";
+}
+
+#rating2:after {
+	content: "★★☆☆☆";
+}
+
+#rating1:after {
+	content: "★☆☆☆☆";
+}
+
+#rating0:after {
+	content: "☆☆☆☆☆";
 }
